@@ -25,12 +25,22 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+      
+    <link rel="stylesheet" href="css/overlay.css">
+      
   </head>
   <body>
+      
+      <div id="myNav" class="overlay">
+<!--  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+  <div class="overlay-content">
+      <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
+  </div>
+</div>
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Zen<span>Xpo 2019</span></a>
+	      <a class="navbar-brand" href="index.html">Zen<span>Xpo'19</span></a>
 <!--
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
@@ -75,7 +85,7 @@
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-md-7">
-						<h2>On our 2nd year Anniversary, we are showcasing Zenlabs to the rest of Zensar.</h2>
+						<h2>On our 2nd year Anniversary, we are showcasing Zenlabs to Zensarians.</h2>
                         <p>ZenXpo'19 is a one-day event to exhibit the prominent research and development work being carried out at Zenlabs.</p>
 					</div>
 				</div>
@@ -105,10 +115,10 @@
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block">
-              <div class="icon"><span><img src="images/icons/005-vr.png" width="60" height="60"></img></span></div>
+              <div class="icon" id="clicker"><span><img src="images/icons/005-vr.png" width="60" height="60"></img></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Interactive Demos</h3>
-                <p>Interact with some of the demos yourself, ranging from Computer vision to Mixed Reality.</p>
+                <p>Interact and play with the Mixed reality and Computer Vision demos yourself.</p>
               </div>
             </div>      
           </div>
@@ -183,6 +193,8 @@
         </div>
         <div class="ftco-search">
 					<div class="row">
+                        
+                        <span class="col-md-12 text-center">Releasing soon..</span>
 <!--
             <div class="col-md-12 nav-link-wrap">
 	            <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -197,6 +209,7 @@
 	            </div>
 	          </div>
 -->
+<!--
 	          <div class="col-md-12 tab-wrap">
 	            
 	            <div class="tab-content" id="v-pills-tabContent">
@@ -320,6 +333,7 @@
 	              </div>
 	            </div>
 	          </div>
+-->
 	        </div>
         </div>
 			</div>
@@ -478,6 +492,26 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script>
+      var i=0;
+      $( '#clicker' ).click( function() { 
+          console.log("clicked");
+          i = i+1;
+          if(i>=5){
+              openNav();
+              i = 0;
+              setTimeout(closeNav, 5000);
+          }
+        } );
+      
+      function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+  </script>
     
   </body>
 </html>
