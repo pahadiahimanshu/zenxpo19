@@ -321,7 +321,8 @@
 	  'autoclose': true
 	});
 
-
+$('#descrition').text("You won. Record the process and send it to the contacts at the bottom. First one to send will win goodies.");
+    
 function makeTimer() {
 
 		var endTime = new Date("3 May 2019 10:00:00 GMT+05:30");			
